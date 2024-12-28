@@ -9,5 +9,4 @@ public class StrefaKursowApplication {
     public static void main(String[] args) {
         SpringApplication.run(StrefaKursowApplication.class, args);
     }
-
 }
