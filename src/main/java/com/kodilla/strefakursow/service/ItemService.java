@@ -13,4 +13,6 @@ public interface ItemService {
     public List<Item> getItemsWithQuantityOver(int minQuantityTreshold);
 
     public List<Item> getItemsWithNameLike(String nameLike);
+
+    public List<Item> findByQuantityGreaterThanEqualOrderByQuantityDesc(Integer minQuantity);
 }

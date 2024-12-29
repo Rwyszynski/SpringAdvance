@@ -31,4 +31,9 @@ public class MainController {
         List<Item> result = itemService.getItemsWithNameLike(regexName);
         return result;
     }
+
+    @RequestMapping("/range")
+    public List<Item> range(HttpServletResponse response) {
+        return itemService.findByQuantityGreaterThanEqualOrderByQuantityDesc(50);
+    }
 }
