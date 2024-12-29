@@ -9,4 +9,8 @@ public interface ItemService {
     public void saveItem(Item item);
 
     public List<Item> getItemsWithQuantityOverTwenty();
+
+    public List<Item> getItemsWithQuantityOver(int minQuantityTreshold);
+
+    public List<Item> getItemsWithNameLike(String nameLike);
 }

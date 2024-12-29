@@ -23,4 +23,15 @@ public class ItemServiceImpl implements ItemService {
     public List<Item> getItemsWithQuantityOverTwenty() {
         return itemRepository.getItemsWithQuantityOverTwenty();
     }
+
+    @Override
+    public List<Item> getItemsWithQuantityOver(int minQuantityTreshold) {
+        return itemRepository.getItemsWithQuantityOver(minQuantityTreshold);
+    }
+
+    @Override
+    public List<Item> getItemsWithNameLike(String regex) {
+        return itemRepository.getItemsWithNameLike(regex);
+    }
+
 }
