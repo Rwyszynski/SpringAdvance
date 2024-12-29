@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
 @RestController
 public class MainController {
@@ -14,14 +15,8 @@ public class MainController {
     ItemService itemService;
 
     @RequestMapping("/")
-    public String index(HttpServletResponse response) {
-        response.addHeader("Spring", "is ok");
+    public List<Item> index(HttpServletResponse response) {
 
-        Item item = new Item();
-        item.setName("Drone");
-        item.setPrice("1000$");
-        itemService.saveItem(item);
-
-        return "Hello World";
+        return itemService.getItemsWithQuantityOverTwenty();
     }
 }

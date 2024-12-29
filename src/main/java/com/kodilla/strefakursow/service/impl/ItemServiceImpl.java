@@ -6,6 +6,8 @@ import com.kodilla.strefakursow.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ItemServiceImpl implements ItemService {
 
@@ -15,5 +17,10 @@ public class ItemServiceImpl implements ItemService {
     @Override
     public void saveItem(Item item) {
         itemRepository.save(item);
+    }
+
+    @Override
+    public List<Item> getItemsWithQuantityOverTwenty() {
+        return itemRepository.getItemsWithQuantityOverTwenty();
     }
 }
